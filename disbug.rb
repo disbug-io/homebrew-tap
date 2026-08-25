@@ -5,21 +5,21 @@
 class Disbug < Formula
   desc "Disbug CLI and MCP server for AI coding agents"
   homepage "https://disbug.io"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.2.0/disbug_0.2.0_darwin_amd64.tar.gz"
-      sha256 "6a1ab5101fb77d01bc7cd20caa66177ff19c176e84d5d37c540f4f24ceb6227c"
+      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.3.0/disbug_0.3.0_darwin_amd64.tar.gz"
+      sha256 "65881d40565c7dd7d052fb0e60242443c7db4b0c7dca7dd413f02ddbd047658b"
 
       define_method(:install) do
         bin.install "disbug"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.2.0/disbug_0.2.0_darwin_arm64.tar.gz"
-      sha256 "f03db4cb0face5889c7709c9de3d51fa9c4a30042bb004886a5ee07a9d11df0b"
+      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.3.0/disbug_0.3.0_darwin_arm64.tar.gz"
+      sha256 "c833a34465d4339279ddab2f64a2411609a1f31731a4068f91efba7365e756a5"
 
       define_method(:install) do
         bin.install "disbug"
@@ -29,15 +29,15 @@ class Disbug < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.2.0/disbug_0.2.0_linux_amd64.tar.gz"
-      sha256 "68ef92f5151ccdc643695faccc0b2c5d4daca160e46b102deab08eee7f8624ba"
+      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.3.0/disbug_0.3.0_linux_amd64.tar.gz"
+      sha256 "1e6bdc04de2f12ea4d0e08e64b23bf6b19c56eb2dbef900e13f9bc66d9880917"
       define_method(:install) do
         bin.install "disbug"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.2.0/disbug_0.2.0_linux_arm64.tar.gz"
-      sha256 "459a8608e6f7804a129bce941d0dcf2b31fdd26c6d7c3243ca0193e45f7279a8"
+      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.3.0/disbug_0.3.0_linux_arm64.tar.gz"
+      sha256 "bc8228b5fe7328177f61d5942c3ad7bb93843c7f92c52f33c84762c15f9fd4f8"
       define_method(:install) do
         bin.install "disbug"
       end
