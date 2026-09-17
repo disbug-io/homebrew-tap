@@ -5,21 +5,21 @@
 class Disbug < Formula
   desc "Disbug CLI and MCP server for AI coding agents"
   homepage "https://disbug.io"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.3.0/disbug_0.3.0_darwin_amd64.tar.gz"
-      sha256 "65881d40565c7dd7d052fb0e60242443c7db4b0c7dca7dd413f02ddbd047658b"
+      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.4.0/disbug_0.4.0_darwin_amd64.tar.gz"
+      sha256 "9e583a01c437abc2cd7ea7f59e4a3eaf6e58e4998d00c7b3e39408b5a509b789"
 
       define_method(:install) do
         bin.install "disbug"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.3.0/disbug_0.3.0_darwin_arm64.tar.gz"
-      sha256 "c833a34465d4339279ddab2f64a2411609a1f31731a4068f91efba7365e756a5"
+      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.4.0/disbug_0.4.0_darwin_arm64.tar.gz"
+      sha256 "f854e222811e92cb17211428985e36550542a356a0212c94e4749cb113dcdd01"
 
       define_method(:install) do
         bin.install "disbug"
@@ -29,15 +29,15 @@ class Disbug < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.3.0/disbug_0.3.0_linux_amd64.tar.gz"
-      sha256 "1e6bdc04de2f12ea4d0e08e64b23bf6b19c56eb2dbef900e13f9bc66d9880917"
+      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.4.0/disbug_0.4.0_linux_amd64.tar.gz"
+      sha256 "11cd3587c75c2afdb17c8dcba64e183a4e0976f142f14312f7fe99b1194bf383"
       define_method(:install) do
         bin.install "disbug"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.3.0/disbug_0.3.0_linux_arm64.tar.gz"
-      sha256 "bc8228b5fe7328177f61d5942c3ad7bb93843c7f92c52f33c84762c15f9fd4f8"
+      url "https://github.com/disbug-io/disbug-cli/releases/download/v0.4.0/disbug_0.4.0_linux_arm64.tar.gz"
+      sha256 "2cdb45715d1f560873c5b7efb281b9eb25744880f24f06d20027b2a70556af30"
       define_method(:install) do
         bin.install "disbug"
       end
@@ -46,10 +46,10 @@ class Disbug < Formula
 
   def caveats
     <<~EOS
-      Installation complete. Now use Disbug login to log in.
+      Installation complete. Now run the guided Disbug onboarding flow.
 
       Run:
-        disbug login
+        disbug onboard
     EOS
   end
 
